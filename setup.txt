@@ -1,0 +1,11 @@
+git clone https://github.com/jesuscopado/local-voice-ai-agent.git
+cd local-voice-ai-agent
+brew install uv
+uv venv                                     
+source .venv/bin/activate
+uv sync
+python3 -m venv .venv    
+source .venv/bin/activate
+#brew install portaudio  # already done, fine
+python -m pip install sounddevice numpy fastrtc ollama webrtcvad
+python cli_local.py 
